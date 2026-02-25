@@ -1,0 +1,276 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.hero {
+  width: 100%;
+  height: 80vh; 
+  position: relative;
+  
+  overflow: hidden; 
+  
+}
+
+.back-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1;
+}
+
+.content {
+    position:absolute;
+   top: 200px;
+   left: 50px;
+   text-align: center;
+   color: rgb(20, 18, 18);
+   z-index: 1;
+   background-color: rgba(194, 177, 196, 0.823);
+   padding: 20px;
+   border-radius: 10px;
+}
+h1 span{
+    color: #81207f;
+    text-decoration-style: dotted;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    /* background: linear-gradient(to right, #f5d2f4, #d8d1cb); */
+    padding: 1rem;
+    font-size:  clamp(18px, 2vw, 32px);
+    font-family: monospace;
+    background: transparent;
+}
+
+
+li{
+cursor: pointer;
+}
+.li1{
+    margin-left: 10px;
+    text-decoration: overline;
+}
+.dev{
+  text-decoration:underline; 
+}
+main{
+    min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+}
+ .form-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            transform: translateY(0);
+            animation: cardPop 0.6s ease-out;
+        }
+
+        @keyframes cardPop {
+            0% {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 28px;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            border-radius: 2px;
+            animation: lineWidth 0.8s ease-out;
+        }
+
+        @keyframes lineWidth {
+            0% { width: 0; }
+            100% { width: 60px; }
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            opacity: 0;
+            animation: slideIn 0.5s ease-out forwards;
+        }
+
+        .input-group[data-delay="0"] { animation-delay: 0.1s; }
+        .input-group[data-delay="1"] { animation-delay: 0.2s; }
+        .input-group[data-delay="2"] { animation-delay: 0.3s; }
+        .input-group[data-delay="3"] { animation-delay: 0.4s; }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .input-group.focus label {
+            color: #667eea;
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 15px;
+            color: #aaa;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        .input-group.focus .input-wrapper i {
+            color: #667eea;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #fafafa;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .error-message {
+            display: block;
+            margin-top: 6px;
+            font-size: 13px;
+            color: #e74c3c;
+            min-height: 20px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+            padding-left: 10px;
+        }
+
+        .error-message.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        button:active::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .success-message {
+            background: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-weight: 500;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.4s, transform 0.4s;
+            pointer-events: none;
+        }
+
+        .success-message.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .success-message i {
+            margin-right: 8px;
+        }

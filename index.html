@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liste</title>
+    
+   <script src="config.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header class="hero">
+            <nav>
+               <li class="li1"><span class="dev">Dev.</span>Aridona</li>
+               <li><a href="#ins">Inscrivez-vous</a></button></li>
+            </nav>
+            <video  muted loop playsinline class="back-video">
+                <source src="assets/18069235-uhd_3840_2160_24fps.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas les vidéos HTML5.
+            </video>
+
+            <div class="content">
+                <h1>Bienvenue sur <span>le site</span> </h1>
+                        <span>Enregistrer vous pour avoir suivre nos Séance autour du developpement web et mobile </span>
+                    </div>
+        </header>
+   
+    <main id="ins">
+        <div class="form-container">
+        <h2><i class="fas fa-pen-alt" style="margin-right: 10px;"></i>Inscription</h2>
+        <form id="myForm">
+            <!-- Champ Nom -->
+            <div class="input-group" data-delay="0">
+                <label for="nom">Nom</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="off">
+                </div>
+                <span class="error-message" id="error-nom"></span>
+            </div>
+
+            <!-- Champ Prénom -->
+            <div class="input-group" data-delay="1">
+                <label for="prenom">Prénom</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user-circle"></i>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" autocomplete="off">
+                </div>
+                <span class="error-message" id="error-prenom"></span>
+            </div>
+
+            <!-- Champ Téléphone -->
+            <div class="input-group" data-delay="2">
+                <label for="telephone">Téléphone</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-phone-alt"></i>
+                    <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78" autocomplete="off">
+                </div>
+                <span class="error-message" id="error-telephone"></span>
+            </div>
+
+            <!-- Champ Email -->
+            <div class="input-group" data-delay="3">
+                <label for="email">Email</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="exemple@domaine.com" autocomplete="off">
+                </div>
+                <span class="error-message" id="error-email"></span>
+            </div>
+
+            <button type="submit"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i>Envoyer</button>
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i> Formulaire envoyé avec succès !
+            </div>
+        </form>
+    </div>
+    </main>
+ <script src="script.js"></script>
+</body>
+</html>
